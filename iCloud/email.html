@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/write1.css" />
+		<link rel="stylesheet" type="text/css" href="css/write2.css" />
+		<link rel="stylesheet" type="text/css" href="css/write3.css" />
+		<link rel="stylesheet" type="text/css" href="css/write4.css" />
+	</head>
+	<body>
+		<!-- 普通邮件 -->
+		<table cellspacing="0" cellpadding="0" border="0" class="composetab">
+			<tbody>
+				<tr>
+					<td>
+						<div class="composetab_img"></div>
+						<div class="composetab_sel">
+							<div>普通邮件</div>
+						</div>
+					</td>
+					<!-- <td>
+						<div class="composetab_img"></div>
+						<div class="composetab_unsel">
+							<div><a class="" onclick="saveContentGoUrl('/cgi-bin/grouplist?t=compose_group&amp;sid=E6tcguQ74MKx4nIt&amp;newwin=');return false;"
+								 hidefocus="">群邮件</a></div>
+						</div>
+					</td>
+					<td>
+						<div class="composetab_img"></div>
+						<div class="composetab_unsel">
+							<div><a onclick="exitConfirm('redirectExitURLId(2)');return false;" hidefocus="">贺卡</a></div>
+						</div>
+					</td>
+					<td>
+						<div class="composetab_img"></div>
+						<div class="composetab_unsel">
+							<div><a onclick="exitConfirm('redirectExitURLId(10)');return false;" hidefocus="">明信片</a></div>
+						</div>
+					</td> -->
+				</tr>
+			</tbody>
+		</table>
+		<!-- 发送 -->
+		<div id="toolbar">
+			<div class="toolbg toolbgline" style="background-image:none;">
+				<div style="margin:5px 0 0 0;" class="right"><a href="javascript:;" ck="compose_preview" class="btn_space">预览</a>&nbsp;&nbsp;<a
+					 onclick="openNewWinEdit();return false;" href="javascript:;" tabindex="12" class="btn_space">新窗口写信</a></div><a
+				 name="sendbtn" tabindex="-1" class="btn_gray btn_space" hidefocus="" href="javascript:;" oldstyledisplay=""
+				 disablednodeid="" style="">发送</a><a name="timeSendbtn" tabindex="-1" class="btn_gray btn_space" hidefocus="" href="javascript:;"
+				 oldstyledisplay="" disablednodeid="" style="">定时发送</a><a name="savebtn" title="存草稿后，您可以在草稿箱中找回" tabindex="-1"
+				 class="btn_gray btn_space" hidefocus="" href="javascript:;" oldstyledisplay="" disablednodeid="" style="">存草稿</a><a
+				 name="closebtn" onclick="return exitConfirm('redirectExitURLId(1)');" tabindex="-1" class="btn_gray btn_space"
+				 hidefocus="" href="javascript:;">关闭</a>
+			</div>
+		</div>
+
+		<!-- 通讯录 -->
+		<div class="readmailinfo" style="border-bottom:1px solid #fff;min-width:650px;_zoom:1;" id="sendtimepadding">
+			<div id="rightArea" style="float:right;width:179px!important;width:180px;margin:16px 12px 0 0; margin:14px 14px 0 0\9;filter:none;">
+				<div id="addr_cmd" onmouseover="if(this.className != 'cptab cpslt')this.className='cptab toolbg'" onmouseout="if(this.className == 'cptab toolbg')this.className='cptab'"
+				 class="cptab cpslt" style="_width:88px;" onclick="changeTab('AddrTab');"><a hidefocus="">通讯录</a></div>
+				<div id="stationery_cmd" onmouseover="if(this.className != 'cptab cpslt')this.className='cptab toolbg'" onmouseout="if(this.className == 'cptab toolbg')this.className='cptab'"
+				 class="cptab" style="margin-left:89px;margin-left:90px\9;border-left-width:1px;border-left-width:0px\9;" onclick="useStationery_new();"><a
+					 hidefocus="">信&nbsp;&nbsp;纸</a></div>
+				<div style="height:25px;filter:none;" class="grptitle_tab_"></div>
+				<div id="AddrTab" class="addrtab cpright" style="">
+					<div id="quickaddr_div" style="height: 411px;">
+						<div class="lm_sbar"><input type="button" id="lm160145544656607748283993659209cancel" class="lm_sopen">
+							<div><input id="lm160145544656607748283993659209searchtext" type="text" class="txt" value="查找联系人..."
+								 autocomplete="off"></div>
+						</div>
+						<div class="lm_panel" style="height: 377px;">
+							<div id="lm160145544656607748283993659209tree">
+								<div class="groupopen" style="display:" key="t3" sub="0">
+									<div class="settingtable qqshowbd" style="padding:4px 0 3px 8px;cursor:default;" tabindex="0" aria-label="最近联系人"><a
+										 class="lm_rt" fun="g3">清空</a>最近联系人</div>
+								</div>
+								<div class="groupsub" style="" key="t3" sub="1">
+									<div class="groupclose" style="display:" key="666" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="1240436420@qq.com" class="lm_addr" tabindex="0">王鹏娟</a></div>
+									<div class="groupclose" style="display:" key="565" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="zhenglei0518@163.com" class="lm_addr" tabindex="0">zhengLei0518</a></div>
+									<div class="groupclose" style="display:" key="464" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="luxp@yonyou.com" class="lm_addr" tabindex="0">luxp</a></div>
+									<div class="groupclose" style="display:" key="363" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="1132727815@qq.com" class="lm_addr" tabindex="0">java编程-于老师</a></div>
+									<div class="groupclose" style="display:" key="262" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="1249264965@qq.com" class="lm_addr" tabindex="0">1249264965</a></div>
+									<div class="groupclose" style="display:" key="161" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="331301471@qq.com" class="lm_addr" tabindex="0">331301471</a></div>
+									<div class="groupclose" style="display:" key="60" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="tjworkteam@163.com" class="lm_addr" tabindex="0">tjworkteam</a></div>
+									<div class="groupclose" style="display:" key="49" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="tjise_jiuye@163.com" class="lm_addr" tabindex="0">tjise_jiuye</a></div>
+									<div class="groupclose" style="display:" key="27" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="rjxqgc@163.com" class="lm_addr" tabindex="0">Rjxqgc</a></div>
+									<div class="groupclose" style="display:" key="m4" sub="0"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="更多联系人" class="lm_addr" tabindex="0"><b>显示更多↓</b></a></div>
+									<div class="groupsub" style="display:none" key="m4" sub="1"><a unselectable="on" nocheck="true" onmousedown="return false;"
+										 title="更多联系人" class="lm_addr" tabindex="0"><b>显示更多↓</b></a></div>
+								</div>
+								<!-- <div class="groupopen" style="display:" key="t2" sub="0">
+									<div class="settingtable qqshowbd" style="padding:4px 0 3px 8px;cursor:default;" tabindex="0" aria-label="QQ好友"><a
+										 class="lm_rt" fun="g2"></a>QQ好友</div>
+								</div> -->
+								<!-- <div class="groupsub" style="" key="t2" sub="1">
+									<div class="groupclose" style="display:" key="g1000000" sub="0">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="大学区／      " class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">大学区／
+													</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupsub" style="display:none" key="g1000000" sub="1">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="大学区／      " class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">大学区／
+													</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupclose" style="display:" key="g1000001" sub="0">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="∝〕﹊　　miss you" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">∝〕﹊　　miss
+														you</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupsub" style="display:none" key="g1000001" sub="1">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="∝〕﹊　　miss you" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">∝〕﹊　　miss
+														you</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupclose" style="display:" key="g1000004" sub="0">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="∝〕﹊　　亲人" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">∝〕﹊　　亲人</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupsub" style="display:none" key="g1000004" sub="1">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="∝〕﹊　　亲人" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">∝〕﹊　　亲人</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupclose" style="display:" key="g1000005" sub="0">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="∝〕﹊　　朋友" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">∝〕﹊　　朋友</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupsub" style="display:none" key="g1000005" sub="1">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="∝〕﹊　　朋友" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">∝〕﹊　　朋友</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupclose" style="display:" key="g1000006" sub="0">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="∝〕﹊　　宿舍" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">∝〕﹊　　宿舍</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupsub" style="display:none" key="g1000006" sub="1">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="∝〕﹊　　宿舍" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">∝〕﹊　　宿舍</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupclose" style="display:" key="g1000007" sub="0">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="闺密区" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">闺密区</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupsub" style="display:none" key="g1000007" sub="1">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="闺密区" class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">闺密区</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupclose" style="display:" key="g1000008" sub="0">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="╪──────   " class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">╪──────
+													</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupsub" style="display:none" key="g1000008" sub="1">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="╪──────   " class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">╪──────
+													</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupclose" style="display:" key="g1000010" sub="0">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="───────   " class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">───────
+													</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="groupsub" style="display:none" key="g1000010" sub="1">
+										<div class="" onmouseover="this.style.background='#FFF6DF'" onmouseout="this.style.background='#fff'" style="padding:2px 0 1px;overflow:hidden;height:100%;">
+											<div style="overflow:hidden;width:100%">
+												<div title="───────   " class="lm_ca" tabindex="0"><a nocheck="true"><input type="button" class="lm_ico">───────
+													</a></div>
+											</div>
+										</div>
+									</div>
+								</div> -->
+							</div>
+							<div id="lm160145544656607748283993659209search" style="display:none;"></div>
+						</div>
+					</div>
+				</div>
+				<div id="stationery_div" class="cpright" style="position:relative;width:177px!important;width:178px;_width:179px;height:369px;display:none;">
+					<input type="hidden" id="stationeryCount" name="stationeryCount" value="">
+					<div style="height:27px;margin:6px 11px 0;">
+						<div id="page_span" style="float:right;font-size:14px;margin-top:4px"> <a id="paper_prev_b" href="javascript:;"
+							 disabled="true" class="paper_controller_btn"> <img id="paper_prev_b_img" src="https://rescdn.qqmail.com/zh_CN/htmledition/images/spacer1e9c5d.gif">
+							</a><span id="pageid"></span><a id="paper_next_b" href="javascript:;" class="paper_controller_btn"> <img id="paper_next_b_img"
+								 src="https://rescdn.qqmail.com/zh_CN/htmledition/images/spacer1e9c5d.gif"> </a> </div>
+					</div>
+					<ul id="show_paper"></ul>
+					<div style="clear:both; position:absolute; bottom:2px; right:9px; width:155px;" id="new_stationery"></div>
+				</div>
+			</div>
+			<div id="rightAreaBtnWarp" style="float: right; margin: 200px 3px 0px 6px; height: 211px;"><a id="rightAreaBtn"
+				 style="font:bold 12px 宋体;text-decoration:none;color:#585858" onclick="hideRightArea(false)"><input type="button"
+					 class="prefd" tabindex="0" aria-label="隐藏通讯录"></a></div>
+			<div style="margin-right:22px; margin-top:14px; clear:left;">
+				<div style="height:2px;display:block;*display:none;width:auto;">&nbsp;</div>
+				<div id="addrsDiv" class="js_addr_div">
+					<table cellpadding="0" cellspacing="0" class="i" border="0" id="trSC" style="width:auto;display:none;margin-bottom:5px;">
+						<tbody>
+							<tr>
+								<td style="*width:58px;*padding-right:10px;" valign="top" nowrap="">
+									<div style="width:58px;padding-right:10px;text-align:right;padding-top:6px" nowrap=""><a id="sc_btn" title="点击选择要分别发送的联系人"
+										 href="javascript:;">分别发送</a></div>
+								</td>
+								<td class="content_title" width="99%" style="*padding-right:4px;">
+									<div id="scAreaCtrl" class="noime div_txt" style="cursor: text;">
+										<div style="position:absolute;color:#A0A0A0;padding-top:1px;display:none;"></div>
+										<div class="addr_text" style="float:left;border:none;overflow:hidden;width:13px;"><input type="input" class="js_input"
+											 style="border:none;outline:none;-webkit-appearance:none;width:100%;" aria-label="分别发送" tabindex="2"
+											 autocomplete="off">
+											<div style="width: 1px; height: 1px; overflow: auto; white-space: nowrap; border: none; margin: 0px; padding: 0px; font-family: Tahoma; font-size: 12px; font-weight: 400; line-height: normal; word-spacing: 0px;"></div>
+										</div>
+										<div style="clear:both;border:none;margin:0;padding:0;" unselectable="on"><input type="text" style="position:absolute;border:none;padding:0;width:10px;left:-9999px;top:-9999px;"
+											 tabindex="-1"></div>
+									</div>
+									<div style="display: none;"></div><textarea id="sc" name="sc" size="100" class="txt input_wd rev noime"
+									 onfocus="setFocus('sc');" style="display:none;" disabled="" tabindex="2"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- 收件人 -->
+					<table cellpadding="0" cellspacing="0" border="0" class="i" style="width:auto;margin-bottom:5px;" id="trTO">
+						<tbody>
+							<tr>
+								<td style="*width:58px;*padding-right:10px;" valign="top" nowrap="">
+									<div style="width:58px;padding-right:10px;text-align:right;padding-top:6px" nowrap=""><a id="to_btn" title="点击选择收件人"
+										 href="javascript:;">收件人</a></div>
+								</td>
+								<td class="content_title" width="99%" style="*padding-right:4px;">
+									<div id="toAreaCtrl" class="noime div_txt" style="cursor: text;">
+										<!-- <div style="position: absolute; color: rgb(160, 160, 160); padding-top: 1px;"></div>
+										<div class="addr_text" style="float:left;border:none;overflow:hidden;width:13px;"> -->
+										<input type="text" class="js_input"
+											 style="border:none;outline:none;-webkit-appearance:none;width:100%;" accesskey="t" aria-label="收件人"
+											 tabindex="1" autocomplete="off">
+											<div style="width: 1px; height: 1px; overflow: auto; white-space: nowrap; border: none; margin: 0px; padding: 0px; font-family: Tahoma; font-size: 12px; font-weight: 400; line-height: normal; word-spacing: 0px;"></div>
+									<!-- 	</div> -->
+										<div style="clear:both;border:none;margin:0;padding:0;" unselectable="on"><input type="text" style="position:absolute;border:none;padding:0;width:10px;left:-9999px;top:-9999px;"
+											 tabindex="-1"></div>
+									</div>
+									<div style="display: none;"></div><textarea title="您可以在右侧中选择联系人给他们发信" id="to" name="to" class="noime txt input_wd rev"
+									 onfocus="setFocus('cc');" style="display:none;" tabindex="1" accesskey="t"></textarea><input id="swap3" name="swap3"
+									 value="" type="hidden">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table cellpadding="0" cellspacing="0" border="0" class="i" id="trCC" style="width:auto;display:none;margin-bottom:5px;">
+						<tbody>
+							<tr>
+								<td style="*width:58px;*padding-right:10px;" valign="top" nowrap="">
+									<div style="width:58px;padding-right:10px;text-align:right;padding-top:6px" nowrap=""><span clss="f_family">&nbsp;&nbsp;&nbsp;</span><a
+										 id="cc_btn" title="点击选择要抄送的联系人" href="javascript:;">抄送</a></div>
+								</td>
+								<td class="content_title" width="99%" style="*padding-right:4px;">
+									<div id="ccAreaCtrl" class="noime div_txt" style="cursor: text;">
+										<div style="position:absolute;color:#A0A0A0;padding-top:1px;display:none;"></div>
+										<div class="addr_text" style="float:left;border:none;overflow:hidden;width:13px;"><input type="input" class="js_input"
+											 style="border:none;outline:none;-webkit-appearance:none;width:100%;" aria-label="抄送" tabindex="2"
+											 autocomplete="off">
+											<div style="width: 1px; height: 1px; overflow: auto; white-space: nowrap; border: none; margin: 0px; padding: 0px; font-family: Tahoma; font-size: 12px; font-weight: 400; line-height: normal; word-spacing: 0px;"></div>
+										</div>
+										<div style="clear:both;border:none;margin:0;padding:0;" unselectable="on"><input type="text" style="position:absolute;border:none;padding:0;width:10px;left:-9999px;top:-9999px;"
+											 tabindex="-1"></div>
+									</div>
+									<div style="display: none;"></div><textarea id="cc" name="cc" size="100" class="txt input_wd rev noime"
+									 onfocus="setFocus('cc');" style="display:none;" disabled="" tabindex="2"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table cellpadding="0" cellspacing="0" border="0" class="i" id="trBCC" style="width:auto;display:none;margin-bottom:5px;">
+						<tbody>
+							<tr>
+								<td style="*width:58px;*padding-right:10px;" valign="top" nowrap="">
+									<div style="width:58px;padding-right:10px;text-align:right;padding-top:6px" nowrap=""><span clss="f_family">&nbsp;&nbsp;&nbsp;</span><a
+										 id="bcc_btn" title="点击选择要密送的联系人" href="javascript:;">密送</a></div>
+								</td>
+								<td class="content_title" width="99%" style="*padding-right:4px;">
+									<div id="bccAreaCtrl" class="noime div_txt" style="cursor: text;">
+										<div style="position:absolute;color:#A0A0A0;padding-top:1px;display:none;"></div>
+										<div class="addr_text" style="float:left;border:none;overflow:hidden;width:13px;"><input type="input" class="js_input"
+											 style="border:none;outline:none;-webkit-appearance:none;width:100%;" aria-label="密送" tabindex="2"
+											 autocomplete="off">
+											<div style="width: 1px; height: 1px; overflow: auto; white-space: nowrap; border: none; margin: 0px; padding: 0px; font-family: Tahoma; font-size: 12px; font-weight: 400; line-height: normal; word-spacing: 0px;"></div>
+										</div>
+										<div style="clear:both;border:none;margin:0;padding:0;" unselectable="on"><input type="text" style="position:absolute;border:none;padding:0;width:10px;left:-9999px;top:-9999px;"
+											 tabindex="-1"></div>
+									</div>
+									<div style="display: none;"></div><textarea id="bcc" name="bcc" size="100" class="txt input_wd rev noime"
+									 onfocus="setFocus('bcc');" style="display:none;" disabled="" tabindex="2"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- 添加抄送 -->
+					<div id="addrOper" style="overflow:hidden; min-height:22px; _zoom:1;">
+						<div class="input_title addrtitle">
+							<div style="float:left;white-space:nowrap;padding-left:70px;"><span><a id="aCC" title="什么是抄送：
+		同时将这一封邮件发送给其他联系人。"
+									 href="javascript:;">添加抄送</a>&nbsp;-&nbsp;<a id="aBCC" title="什么是密送：
+		同时将这一封邮件发送给其他联系人，但收件人及抄送人不会看到密送人。" href="javascript:;">添加密送</a>&nbsp;|&nbsp;</span><span
+								 style="display:none;">每个收件人将收到单独发给他/她的邮件。</span><a id="aSC" title="什么是分送：
+		会对多个人一对一发送。每个人将收到单独发给他/她的邮件。" href="javascript:;">分别发送</a></div>
+							<div class="addrtitle right" style="display:none;">您是否还要找：<span id="addrAssociation"><a href="">nicoyang</a>，<a
+									 href="">angusdu</a>, <a href="">allen</a></span></div>
+							<div class="clr"></div>
+						</div>
+					</div>
+				</div>
+		
+				<table id="addrUrlCreator" cellpadding="0" cellspacing="0" border="0" class="i" style="display:none;width:auto;margin-bottom:5px;">
+					<tbody>
+						<tr>
+							<td style="*width:58px;*padding-right:10px;" valign="top" nowrap=""></td>
+							<td width="99%" id="receiverMsgContainer">
+								<div style="display: none;"></div>
+							</td>
+						</tr>
+						<tr>
+							<td style="*width:58px;*padding-right:10px;" valign="top" nowrap="">
+								<div style="width:58px;padding-right:10px;text-align:right;padding-top:6px" nowrap="">收件人</div>
+							</td>
+							<td class="content_title" width="99%" style="*padding-right:4px;">
+								<div class="attbg bd urlcreator_to"><span class="ico_urlcreator"></span><span>网页生成助手</span><a onclick="rmHelper('urlcreator');"
+									 class="ico_close_mini" title="移除"></a></div>
+								<div style="margin:0 0 8px 0;clear:both;" class="addrtitle">试试给助手发封邮件。它会把邮件转成网页，并把网页的链接地址回复给你。<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;no=1001014&amp;&amp;id=23"
+									 target="_blank">了解更多</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="addrQzone" cellpadding="0" cellspacing="0" border="0" class="i" style="display:none;width:auto;margin-bottom:5px;">
+					<tbody>
+						<tr>
+							<td style="*width:58px;*padding-right:10px;" valign="top" nowrap=""></td>
+							<td width="99%" id="receiverMsgContainer"></td>
+						</tr>
+						<tr>
+							<td style="*width:58px;*padding-right:10px;" valign="top" nowrap="">
+								<div style="width:58px;padding-right:10px;text-align:right;padding-top:6px" nowrap="">收件人</div>
+							</td>
+							<td class="content_title" width="99%" style="*padding-right:4px;">
+								<div class="attbg bd urlcreator_to"><span class="ico_addrqzone"></span><span>发表到我的Qzone</span><a onclick="rmHelper('qzone');"
+									 class="ico_close_mini" title="移除"></a></div>
+								<div style="margin:0 0 8px 0;clear:both;" class="addrtitle">给“发表到我的Qzone”发信，即可把邮件内容以日志形式发表到Qzone上。<a href="http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;no=242&amp;&amp;id=23"
+									 target="_blank">了解更多</a></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- 主题 -->
+				<table cellpadding="0" cellspacing="0" border="0" class="i" style="width:auto;margin:5px 0;">
+					<tbody>
+						<tr>
+							<td style="*width:58px;*padding-right:10px;" valign="top" nowrap=""></td>
+							<td width="99%" id="receiverMsgContainer"></td>
+						</tr>
+						<tr>
+							<td style="*width:58px;*padding-right:10px;" valign="top" nowrap="">
+								<div style="width:58px;padding-right:10px;text-align:right;padding-top:6px" nowrap=""><span title="主题是一封邮件的标题。">主题</span></div>
+							</td>
+							<td class="content_title" width="99%" style="*padding-right:4px;">
+								<div class="div_txt" style="cursor: text;" unselectable="on"><a hidefocus="" style="display:block;float:right;width:24px;text-decoration:none;"><input
+										 type="button" title="在QQ邮箱之间发送邮件时使用彩色标题。" id="cpanelBtn" hidefocus="" class="pointer"></a>
+									<div style="margin-right:32px;height:16px;">
+										<div style="_position:absolute;_width:100%;"><input id="subject" title="主题是一封邮件的标题，可不填。" name="subject" type="text"
+											 autocomplete="off" tabindex="2" class="" style="word-break:break-all;height:16px;line-height:16px;width:99%;border-width:0;"
+											 value="" onfocus="showSubjectMsg(false);"></div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- 添加附件 -->
+			<div class="input_title" style="padding-top:10px;padding-bottom:8px;" onmousedown="QMAttach.hideDragAndDropContainer();">
+				<span style="display:none" id="attachupload"></span> <span id="composecontainer"><span class="compose_toolbtn qmEditorAttach dragAndDropTrap_box"><span
+						 sizelimit="50" title="添加小于 50M 的文件作为附件" id="AttachFrame" onmouseover="getTop().addClass(getTop().finds('a',this)[0],'underline');"
+						 onmouseout="getTop().rmClass(getTop().finds('a',this)[0],'underline');" onmousedown="getTop().LogKV('compose|toolbar|entrance|attach');"
+						 style="position: relative;"><span style="top: 0px; left: 0px; position: absolute; cursor: pointer; width: 66px; height: 16px; overflow: hidden; background-color: rgb(255, 255, 255); zoom: 1; opacity: 0; z-index: 1;"><input
+								 type="file" title=" " name="UploadFile" multiple="" style="font-family: Times; position: absolute; cursor: pointer; width: 2000px; height: 600px; right: 0px;"></span><a
+							 class="compose_toolbtn_text ico_att" onclick="return false;" onmousedown="getTop().LogKV('compose|toolbar|entrance|attach');return false;"
+							 hidefocus=""  style="margin-left: 80px;"><span id="sAddAtt1">添加附件</span><span onclick="return false;" onmousedown="return false;" style="display:none;"
+								 id="sAddAtt2">继续添加</span></a></span><a class="ico_moreupload" id="moreupload"></a></span><span class="compose_toolbtn qmEditorAttachBig"
+					 onmousedown="return false;" ftnv2="true" onclick="getTop().LogKV('compose|toolbar|entrance|bigattach');initFileTransporter();return false"
+					 title="可以向任何邮箱发送最大 3G 的附件" id="bigAttachLink"><a class="compose_toolbtn_text ico_attbig" hidefocus="">超大附件</a></span>
+                       <span class="compose_toolbtn qmEditorAttachBig" onmousedown="return false;" ftnv2="true" onclick="getTop().LogKV('compose|toolbar|entrance|span_online_doc');showAddOnlineDocDlg();return false"
+					 title="在线文档" id="span_online_doc"><a class="compose_toolbtn_text ico_editDoc" style="padding-left:20px;"
+						 hidefocus="">在线文档</a></span>
+				</span><span id="QMEditorToolBarPlusArea"><span class="editor_btn unselect qmEditorPhotoWrap" style="position: relative;"><a
+						 class="editor_btn_text qmEditorPhoto " style="position: relative;"><span style="top: 0px; left: 0px; position: absolute; cursor: pointer; width: 44px; height: 19px; overflow: hidden; background-color: rgb(255, 255, 255); zoom: 1; opacity: 0; z-index: 1;"><input
+								 type="file" title=" " name="UploadFile" multiple="" style="font-family: Times; position: absolute; cursor: pointer; width: 2000px; height: 600px; right: 0px;"></span>照片</a><span
+						 class="ico_moreupload" opt="more"></span></span><span class="editor_btn unselect" id="editor_word_compose_tip"
+					 style="position: relative;"><a class="editor_btn_text qmEditorWord " style="position: relative;"><span style="top: 0px; left: 0px; position: absolute; cursor: pointer; width: 42px; height: 19px; overflow: hidden; background-color: rgb(255, 255, 255); zoom: 1; opacity: 0; z-index: 1;"><input
+								 type="file" title=" " name="UploadFile" multiple="" style="font-family: Times; position: absolute; cursor: pointer; width: 2000px; height: 600px; right: 0px;"></span>文档</a></span><span
+					 class="editor_btn unselect"><a class="editor_btn_text qmEditorScreenSnap qmEditorScreenSnapDisable">截屏</a></span><span
+					 class="editor_btn unselect" id="netdisk_compose_tip" style="display: none;"><a class="editor_btn_text qmEditorNetDisk ">网盘</a></span><span
+					 class="editor_btn unselect"><a class="editor_btn_text qmEditorMo ">表情</a></span><span class="editor_btn unselect"><a
+						 class="editor_btn_text qmEditorMore ">更多</a></span></span>
+				<script>document.write(getTop().outputToolBarControlBtn());</script><span class="editor_btn" style="margin-right:0;"><a
+					 id="editor_toolbar_btn_container" style="" unselectable="on" onmousedown="return false;" class="editor_btn_text qmEditorTxtStyle">
+						<font class="editor_netdisk_txtmini">格式</font><span style="display: none;">↑</span><span style="">↓</span>
+					</a></span>
+			</div>
+			<div style="margin:0 211px 0 69px; _margin-right:231px;" id="AttList" class="attbg">
+				<div style="display:none;padding:7px;" id="editor_bgmusic_container"></div>
+				<div style="display:none;" id="attachContainer">
+					<div id="exist_file"></div>
+					<div id="filecell"></div>
+					<div id="BigAttach"></div>
+					<div id="div_onlineAttach"></div>
+				</div>
+			</div>
+			<div class="input_title infobar" id="encrypt_mail_tips" style="display:none; line-height: 25px; padding: 0 0 0 10px; margin: 0 210px 5px 68px;">这是一封加密邮件，对方需要解密才能查看邮件内容。</div>
+			<div style="margin-right:20px;margin-top:-5px;">
+				<table cellpadding="0" class="i" cellspacing="0" border="0" style="width:auto;">
+					<tbody>
+						<tr>
+							<td style="*width:58px;*padding-right:10px;" valign="top" nowrap="">
+								<div style="width:58px;padding-right:10px;text-align:right;padding-top:6px" nowrap="">正文</div>
+							</td>
+							<td class="content_title" style="padding-top:1px!important;padding-top:0;padding-right:0;width:99%;" valign="top"><textarea
+								 id="content" name="content__html" style="display:none;"></textarea>
+								<div id="QMEditorArea" style="position: relative; overflow: hidden; height: 319px;" tindex="3" acckey="q" title="正文"
+								 qmeditorid="compose">
+									<div ui-type="html5drag_msg" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none; border-width: 1px 1px 0px; border-style: solid; border-color: rgb(195, 195, 195); text-align: center; background: rgb(255, 255, 255); z-index: 2; font-size: 14px;">
+										<div style="pointer-events: none;height: 40px;margin-top: 55px;position: absolute;top: 50%;line-height: 40px;width: 100%;">将图片拖拽至此区域，可直接添加至正文。</div>
+									</div>
+									<table cellspacing="0" cellpadding="0" class="qmEditorBase" style="">
+										<tbody>
+											<tr style="display:none;">
+												<td height="10px" class="qmEditorToolBar" valign="top" unselectable="on" disp="false">
+													<div id="qmEditorToolBarDiv" class="qmEditorToolBarDiv" tabindex="0" aria-label="格式">
+														<div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorBold qmEditorBtnIconBold qmEditorBtnIcon unselect" unselectable="on"><input type="button"
+																	 tabindex="0" title="加粗" aria-label="加粗" class="qmEditorIcon" unselectable="on" onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorItalic qmEditorBtnIconItalic qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="斜体" aria-label="斜体" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorUnderline qmEditorBtnIconUnderline qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="下划线" aria-label="下划线" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorFontName qmEditorBtnIconFontName qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="选择字体" aria-label="选择字体" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorFontSize qmEditorBtnIconFontSize qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="选择字体大小" aria-label="选择字体大小" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorForeColor qmEditorBtnIconForeColor qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="选择字体颜色" aria-label="选择字体颜色" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorBackColor qmEditorBtnIconBackColor qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="选择背景颜色" aria-label="选择背景颜色" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorAlignMode qmEditorBtnIconAlignMode qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="选择对齐方式" aria-label="选择对齐方式" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorSerial qmEditorBtnIconSerial qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="设置编号" aria-label="设置编号" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorIndentMode qmEditorBtnIconIndentMode qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="设置缩进" aria-label="设置缩进" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorformatblock qmEditorBtnIconformatblock qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="引用内容" aria-label="引用内容" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorCreateLink qmEditorBtnIconCreateLink qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="插入/移除链接" aria-label="插入/移除链接" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on" title="格式刷用法：
+		1. 选中具有目标格式的内容
+		2. 单击格式刷
+		3. 再选中其它内容，这些内容会自动应用目标格式
+		
+		提示：步骤2中若双击格式刷，可连续执行步骤3。">
+																<div class="qmEditorFormatMatch qmEditorBtnIconFormatMatch qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="格式刷" aria-label="格式刷" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on"></div>
+															<div class="qmEditorToolBarItem unselect" unselectable="on">
+																<div class="qmEditorHtml qmEditorBtnIconHtml qmEditorBtnIcon unselect" unselectable="on"><input type="button"
+																	 title="编辑HTML源码" aria-label="编辑HTML源码" class="qmEditorIcon" unselectable="on" onmousedown="return false;"></div>
+															</div>
+															<div class="qmEditorToolBarItemRight" unselectable="on">
+																<div class="qmEditorFullScreen qmEditorBtnIconFullScreen qmEditorBtnIcon unselect" unselectable="on"><input
+																	 type="button" tabindex="0" title="全屏" aria-label="全屏" class="qmEditorIcon" unselectable="on"
+																	 onmousedown="return false;"></div>
+															</div>
+														</div>
+														<div style="display:none;"></div>
+														<div class="qmEditorBtnIcon" style="width:1px;"></div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td height="100%" valign="top" unselectable="on" class="qmEditorContent"><iframe frameborder="0" scrolling="auto"
+													 id="_160145544655608924329288240411" name="_160145544655608924329288240411" class="qmEditorIfrmEditArea"
+													 onload="this.setAttribute('loaded','true');_creAteifRAmeoNlQAd_('_160145544655608924329288240411',this);"
+													 src="javascript:(function(){document.open();document.domain='mail.qq.com';frameElement['_render_']=1;try{document.write('<head><script>window.onerror=function(){return true};</script>'+parent['_cAcheBYifRAme_']['_160145544655608924329288240411_h']+'</head>'+parent['_cAcheBYifRAme_']['_160145544655608924329288240411_b']);parent['_cAcheBYifRAme_']['_160145544655608924329288240411_h']=parent['_cAcheBYifRAme_']['_160145544655608924329288240411_b']=null;}catch(e){alert(e.message);}document.close();})()"
+													 style="" hidefocus="" tabindex="3" loaded="true" cbi_inited="true"></iframe><textarea class="qmEditorText"
+													 tabindex="3" style="display:none;font-size:12px;"></textarea><textarea class="qmEditorText" tabindex="3"
+													 style="display:none;font-size:12px;"></textarea></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="qmEditorBaseBd"></div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="composeMoreOpt" style="margin-top: 5px; height: auto; float: left; width: 100%;" class="settingtable">
+				<div style="margin:8px 0 0 68px">
+					<div style="float: left; height: 20px;">
+						<div id="Senderdiv" style="float:left;">
+							<div title="可选择邮箱别名或POP文件夹的邮件地址
+		作为发信帐号。" style="float:left; margin-left:-3px;" class="textoftitle">&nbsp;发件人：</div>
+							<div id="sendmailname_val" unselectable="on" onmousedown="return false" style="cursor:pointer; padding:0 0 0 3px;  float:left;"><b>H*</b>
+								&lt;<span>2418173624@qq.com</span>&gt;<span class="addrtitle" style="font-family: arial,sans-serif; padding-left:4px; font-size:9px; position:relative; top:-1px;">▼</span></div>
+						</div><span class="left addrtitle">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span><input type="hidden" id="sendmailname"
+						 name="sendmailname" value="2418173624@qq.com">
+					</div>
+					<div class="left" style="position: relative;">
+						<div id="signSelContainer"></div>
+					</div>
+					<div class="left"><span style="cursor:pointer;" id="otherComposeOptionBtn">其他选项<img src="https://rescdn.qqmail.com/zh_CN/htmledition/images/spacer1e9c5d.gif"
+							 class="arrowdown"></span>&nbsp;</div>
+					<div class="clr"></div>
+				</div>
+				<div id="otherComposeOptionCntr" style="display:none;">
+					<div class="qqshowbd" style="padding:6px 8px;background:#FFF;margin:0 210px 8px 68px;margin-right:213px\9;padding-top:3px\9;_padding-top:10px;line-height:22px;overflow:hidden;zoom:1;"><span
+						 class="nowrap left" style="margin-right:6px;"><input title="勾选保存，邮件发送成功后，可返回已发送文件夹
+		中查看此封已发邮件。" type="checkbox"
+							 id="savesendbox" tabindex="8" name="savesendbox" value="1" style="margin:2px 1px 0 0;_margin:-5px 1px 0 0;vertical-align:middle;"><label
+							 style="cursor:pointer;vertical-align:middle;" for="savesendbox" title="勾选保存，邮件发送成功后，可返回已发送文件夹
+		中查看此封已发邮件。">保存到"已发送"</label>&nbsp;&nbsp;<span
+							 id="auto_save_span" style="display:none"><input title="勾选保存，邮件发送成功后，可返回已发送文件夹
+		中查看此封已发邮件。" type="checkbox" id="auto_save"
+								 name="auto_save" value="1" style="margin:2px 1px 0 0;_margin-top:-5px;vertical-align:middle;"><label style="cursor:pointer;vertical-align:middle;"
+								 for="auto_save">每次发信自动保存到"已发送"</label>&nbsp;&nbsp;</span><input type="checkbox" id="high" tabindex="9" name="priority"
+							 title="邮件投递优先级" value="urgency" style="margin:2px 1px 0 0;_margin-top:-5px;vertical-align:middle;"><label style="cursor:pointer;vertical-align:middle;"
+							 for="high" title="邮件投递优先级">紧急</label>&nbsp;&nbsp;<input title="启用回执功能
+		您可以了解收件人是否阅读了您发送的邮件" type="checkbox" id="receipt"
+							 name="receipt" value="receipt" tabindex="10" style="margin:2px 1px 0 0;_margin-top:-5px;vertical-align:middle;"><label
+							 style="cursor:pointer;vertical-align:middle;" for="receipt" title="启用回执功能
+		您可以了解收件人是否阅读了您发送的邮件">需要回执</label></span><wbr><span
+						 class="nowrap left" style="margin-right:6px;"><input id="contenttype" name="contenttype" value="text" style="margin:2px 1px 0 0;_margin-top:-5px;vertical-align:middle;"
+							 type="checkbox" onclick="changeContentType(this);" title="把邮件内容切换成纯文本
+		它将无法插入图片、表情，以及
+		将丢失正文颜色等"><label style="cursor:pointer;vertical-align:middle;"
+							 for="contenttype" title="把邮件内容切换成纯文本
+		它将无法插入图片、表情，以及
+		将丢失正文颜色等">纯文本</label>&nbsp;&nbsp;<input id="noletter"
+							 name="noletter" value="1" type="checkbox" style="margin:2px 1px 0 0;_margin-top:-5px;vertical-align:middle;"
+							 onclick="" title=""><label style="cursor:pointer;vertical-align:middle;" for="noletter" title="">使用信纸</label></span><wbr><span
+						 class="nowrap left" style="position:relative;"><input title="加密" type="checkbox" name="secmailcode" id="secmailcode"
+							 value="" style="margin:2px 1px 0 0;_margin-top:-5px;vertical-align:middle;"><label style="cursor:pointer;vertical-align:middle;"
+							 for="secmailcode">对邮件加密</label></span></div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<!-- 收件人 -->
+		<!--  -->
+	</body>
+</html>
